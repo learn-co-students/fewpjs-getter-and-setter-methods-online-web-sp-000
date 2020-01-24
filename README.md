@@ -1,4 +1,4 @@
-# Building Cells: Getter and Setter Methods
+# Building Cells: Getter and Setter Methods   
 
 ## Learning Goals
 
@@ -22,7 +22,7 @@ class Bird {
   constructor(name) {
     this.name = name;
   }
-  
+
   set phrase(phrase) {
     this._phrase = phrase;
   }
