@@ -1,11 +1,25 @@
-function circle(radius) {
-  this.radius = radius;
-  // area method
-  this.area = function () {
-    return Math.PI * this.radius * this.radius;
-  };
-  // perimeter method
-  this.perimeter = function () {
-    return 2 * Math.PI * this.radius;
-  };
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+  }
+
+  get diameter() {
+    return this.radius * 2;
+  }
+
+  set diameter(d) {
+    this.radius = d / 2;
+  }
+
+  get circumference() {
+    return Math.PI * this.diameter;
+  }
+
+  set circumference(circ) {
+    this.radius = circ / (Math.PI * 2);
+  }
+
+  get area() {
+    return Math.PI * this.radius ** 2;
+  }
 }
