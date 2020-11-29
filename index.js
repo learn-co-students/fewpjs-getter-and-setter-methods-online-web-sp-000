@@ -4,7 +4,23 @@ class Circle {
     }
 
     get diameter() {
-        return diameter = this.radius * 2;
+        return this.radius * 2;
     }
 
+    get circumference() {
+        return Math.PI * this.diameter;
+    }
+
+    get area() {
+        return Math.PI * (this.radius * this.radius)
+    }
+
+    set diameter(diameter) {
+        this.radius = diameter / 2
+        // will reset the radius based on the diameter passed in
+    }
+
+    set circumference(circumference) {
+        this.radius = circumference / (Math.PI * 2)
+    }
 }
