@@ -6,20 +6,34 @@
 // Define setter methods for diameter, circumference, and area which will accept values for each calculation, calculate the
 // radius based on the input value and set this.radius accordingly
 
+const pi = Math.PI
+
 class Circle {
-  constructor(radius) {
-  this.radius = radius;
-}
+  constructor( radius ) {
+    this.radius = radius;
+  }
 
-get diameter(diameter){
-  this.diameter = 2*radius;
-}
+  get diameter() {
+    return this.radius * 2
+  }
 
-get circumference(circumference){
-  this.circumference = 2*diameter;
-}
+  set diameter( diameter ) {
+    this.radius = diameter / 2
+  }
 
-get area(area){
-  this.area = Math.Pi * radius**2;
-}
+  get circumference() {
+    return ( this.radius * 2 ) * pi
+  }
+
+  set circumference( circumference ) {
+    this.radius = circumference / ( pi * 2 )
+  }
+
+  get area() {
+    return pi * ( this.radius * this.radius )
+  }
+
+  set area( area ) {
+    this.radius = Math.sqrt( area / pi )
+  }
 }
