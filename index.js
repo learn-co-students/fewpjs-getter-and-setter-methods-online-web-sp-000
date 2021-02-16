@@ -15,15 +15,15 @@ class Circle {
     return Math.PI * (this.radius * this.radius)
   }
 
-  set diameter(newRadius){
-    this.radius = newRadius / 2;
+  set diameter(newDiameter){
+    this.radius = newDiameter / 2;
   }
 
   set circumference(newCircumference){
     this.radius = (newCircumference) / (2 * Math.PI);
   }
 
-  set area(newRadius){
-    this.radius = Math.PI / (newRadius * newRadius);
+  set area(newArea){
+    this.radius = Math.sqrt(newArea) / Math.PI;
   }
 }
