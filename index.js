@@ -22,7 +22,7 @@ class Circle {
     }
 
     get circumference(){
-        return 2 * this.radius * Math.PI
+        return (2 * this.radius) * Math.PI
     }
 
     get area(){
