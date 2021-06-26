@@ -4,7 +4,6 @@ describe( "Circle", () => {
   beforeEach( () => {
     circle = new Circle( 6 )
   } )
-
   it( "correctly returns the radius property of a Circle instance using `circle.radius`", () => {
     expect( circle.radius ).to.equal( 6 )
   } )
